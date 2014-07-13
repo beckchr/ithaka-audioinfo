@@ -1,7 +1,7 @@
 # Ithaka Audio Info
 
 [_Ithaka Audio Info_](https://github.com/beckchr/ithaka-audioinfo/) provides a simple way to
-extract meta (tag) information from audio files.
+extract meta (tag) information from audio files. _Ithaka Audio Info_ requires Java 7 or later.
 
 ## Features
 
