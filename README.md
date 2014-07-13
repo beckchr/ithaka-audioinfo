@@ -13,7 +13,7 @@ extract meta (tag) information from audio files.
 
 Here's a brief introduction the core interfaces and classes.
 
-![](https://raw.github.com/beckchr/ithaka-audio/master/Core-API.png)
+![](https://raw.github.com/beckchr/ithaka-audioinfo/master/Core-API.png)
 
 As you can see, the `AudioInfo` has concrete subclasses `M4AInfo` and `MP3Info`.
 
