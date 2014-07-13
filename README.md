@@ -42,7 +42,7 @@ Create an `MP3Info` like this:
 This will examine ID3 tags (ID3v2 as well as ID3v1) and calculate duration by analyzing the audio frames.
 (If you just want to examine ID3v2, you can use `ID3v2Info` instead.)
 
-Class `AudioInfo` contains the following properties:
+Class `AudioInfo` provides the following properties:
 
 	String brand;		// brand, e.g. "M4A", "MP3", ...
 	long duration;		// track duration (milliseconds)
