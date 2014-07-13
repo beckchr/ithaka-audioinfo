@@ -15,7 +15,7 @@ Here's a brief introduction the core interfaces and classes.
 
 ![](https://raw.github.com/beckchr/ithaka-audioinfo/master/Core-API.png)
 
-As you can see, the `AudioInfo` has concrete subclasses `M4AInfo` and `MP3Info`.
+As you can see, the abstract class `AudioInfo` has concrete subclasses `M4AInfo` and `MP3Info`.
 
 Create an `M4AInfo` like this:
 
@@ -50,9 +50,9 @@ Class `AudioInfo` contains the following properties:
 	String artist;		// track artist
 	String albumArtist;	// album artist
 	String album;		// album title
-	short year;			// year...
+	short year;			// year
 	String genre;		// genre name
-	String comment;		// comment...
+	String comment;		// comment
 	short track;		// track number
 	short tracks;		// number of tracks
 	short disc;			// disc number
