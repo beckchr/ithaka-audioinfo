@@ -88,4 +88,4 @@ or manually grab latest JARs [here](http://beckchr.github.com/ithaka-maven/mvnre
 _Ithaka Audio Info_ is available under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html).
 
 
-_(c) 2012 Odysseus Software_
+_(c) 2014 Odysseus Software_
