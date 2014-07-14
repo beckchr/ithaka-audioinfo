@@ -21,7 +21,7 @@ Create an `M4AInfo` like this:
 
 	File m4aFile = new File("sample.m4a");
 	
-	try (InputStream input = new FileInputStream(m4aFile)) {
+	try (InputStream input = new BufferedInputStream(new FileInputStream(m4aFile))) {
 		AudioInfo audioInfo = new M4AInfo(input);
 		...
 	} catch (Exception e) {
@@ -32,7 +32,7 @@ Create an `MP3Info` like this:
 
 	File mp3File = new File("sample.mp3");
 	
-	try (InputStream input = new FileInputStream(mp3File)) {
+	try (InputStream input = new BufferedInputStream(new FileInputStream(mp3File))) {
 		AudioInfo audioInfo = new MP3Info(input, mp3File.length());
 		...
 	} catch (Exception e) {
@@ -40,7 +40,8 @@ Create an `MP3Info` like this:
 	}
 
 This will examine ID3 tags (ID3v2 as well as ID3v1) and calculate duration by analyzing the audio frames.
-(If you just want to examine ID3v2, you can use `ID3v2Info` instead.)
+If you just want to examine ID3v2, you can use `ID3v2Info` instead.
+The input stream must support the `mark/reset` methods (which is the case for `BufferedInputStream`).
 
 Class `AudioInfo` provides the following properties:
 
