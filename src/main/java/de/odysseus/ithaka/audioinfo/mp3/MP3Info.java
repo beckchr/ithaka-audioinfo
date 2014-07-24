@@ -34,7 +34,7 @@ public class MP3Info extends AudioInfo {
 		public boolean stopRead(MP3Input data) throws IOException;
 	}
 	
-	public MP3Info(InputStream input, final long fileLength) throws IOException, ID3v2Exception, MP3Exception {
+	public MP3Info(InputStream input, long fileLength) throws IOException, ID3v2Exception, MP3Exception {
 		this(input, fileLength, Level.FINEST);
 	}
 
