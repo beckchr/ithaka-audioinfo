@@ -15,8 +15,6 @@
  */
 package de.odysseus.ithaka.audioinfo.m4a;
 
-import java.io.DataInput;
-import java.io.DataInputStream;
 import java.io.EOFException;
 import java.io.IOException;
 import java.math.BigDecimal;
@@ -27,11 +25,8 @@ import de.odysseus.ithaka.audioinfo.util.RangeInputStream;
  * MP4 atom.
  */
 public class MP4Atom extends MP4Box<RangeInputStream> {
-	private final DataInput data;
-
 	public MP4Atom(RangeInputStream input, MP4Box<?> parent, String type) {
 		super(input, parent, type);
-		this.data = new DataInputStream(input);
 	}
 
 	/**
@@ -57,14 +52,6 @@ public class MP4Atom extends MP4Box<RangeInputStream> {
 	
 	public boolean hasMoreChildren() {
 		return (getChild() != null ? getChild().getRemaining() : 0) < getRemaining();
-	}
-
-	public MP4Atom nextChild(String expectedTypeExpression) throws IOException {
-		MP4Atom atom = nextChild();
-		if (atom.getType().matches(expectedTypeExpression)) {
-			return atom;
-		}
-		throw new IOException ("atom type mismatch, expected " + expectedTypeExpression + ", got " + atom.getType());
 	}
 
 	public MP4Atom nextChildUpTo(String expectedTypeExpression) throws IOException {
