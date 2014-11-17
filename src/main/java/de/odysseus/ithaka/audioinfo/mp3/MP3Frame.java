@@ -297,7 +297,7 @@ public class MP3Frame {
 		if (isXingFrame()) {
 			int xingOffset = header.getXingOffset();
 			byte flags = bytes[xingOffset + 7];
-			if ((flags & 0xF01) != 0) {
+			if ((flags & 0x01) != 0) {
 				return  ((bytes[xingOffset +  8] & 0xFF) << 24) |
 						((bytes[xingOffset +  9] & 0xFF) << 16) |
 						((bytes[xingOffset + 10] & 0xFF) << 8)  |
